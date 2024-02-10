@@ -892,6 +892,8 @@ PODS:
     - React-debug
   - react-native-orientation-locker (1.6.0):
     - React-Core
+  - react-native-pip-android (1.0.1):
+    - React-Core
   - react-native-video (6.0.0-beta.5):
     - React-Core
     - react-native-video/Video (= 6.0.0-beta.5)
@@ -1069,6 +1071,11 @@ PODS:
     - React-perflogger (= 0.73.3)
   - RNDeviceInfo (10.12.0):
     - React-Core
+  - RNReanimated (3.7.0):
+    - glog
+    - RCT-Folly (= 2022.05.16.00)
+    - React-Core
+    - ReactCommon/turbomodule/core
   - SocketRocket (0.6.1)
   - SPTPersistentCache (1.1.0)
   - Yoga (1.14.0)
@@ -1105,6 +1112,7 @@ DEPENDENCIES:
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
   - react-native-orientation-locker (from `../node_modules/react-native-orientation-locker`)
+  - react-native-pip-android (from `../node_modules/react-native-pip-android`)
   - react-native-video (from `../node_modules/react-native-video`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
@@ -1127,6 +1135,7 @@ DEPENDENCIES:
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -1197,6 +1206,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   react-native-orientation-locker:
     :path: "../node_modules/react-native-orientation-locker"
+  react-native-pip-android:
+    :path: "../node_modules/react-native-pip-android"
   react-native-video:
     :path: "../node_modules/react-native-video"
   React-nativeconfig:
@@ -1241,6 +1252,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNDeviceInfo:
     :path: "../node_modules/react-native-device-info"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -1278,6 +1291,7 @@ SPEC CHECKSUMS:
   React-logger: cb0dd15ac67b00e7b771ef15203edcb29d4a3f8e
   React-Mapbuffer: ac7eff7bcdb1716d18eb7b305ee8c43a9a1ed7c8
   react-native-orientation-locker: 4409c5b12b65f942e75449872b4f078b6f27af81
+  react-native-pip-android: 90f832151619dcc0cccd7a4dbad1488ffd3bce73
   react-native-video: 634ca004e7747638885f40797d5e5052042483e9
   React-nativeconfig: 4662ac75a0a77789c9ed896ed77baa1a25cdf006
   React-NativeModulesApple: 92bc296f2ae166d10cb4d6a05498c80bf4ef9fa2
@@ -1300,6 +1314,7 @@ SPEC CHECKSUMS:
   React-utils: 2d25ca0a6e635c095bc5e67ac1202c7939ec4af3
   ReactCommon: 8564d71cf76b1715740cb8bdc5b382d1ddd12dd1
   RNDeviceInfo: db5c64a060e66e5db3102d041ebe3ef307a85120
+  RNReanimated: ea7e98bf4f1167ca3cd3c348604d34dc4294e848
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   SPTPersistentCache: df36ea46762d7cf026502bbb86a8b79d0080dff4
   Yoga: 08cd7601462818c4985bda7b205b9e6a92a7e66a
