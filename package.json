@@ -15,7 +15,6 @@
     "react-native-device-info": "^10.12.0",
     "react-native-media-console": "^2.2.0",
     "react-native-orientation-locker": "^1.6.0",
-    "react-native-pip-android": "^1.0.1",
     "react-native-video": "^6.0.0-alpha.7"
   },
   "devDependencies": {

@@ -10,9 +10,4 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: getWindowWidth(),
   },
-  pipVideoContainer: {
-    width: 200,
-    height: 125,
-    backgroundColor: 'red',
-  },
 });

@@ -1,5 +1,5 @@
 import React, {memo, useEffect, useMemo, useState} from 'react';
-import {Alert, Button, View} from 'react-native';
+import {Alert, View} from 'react-native';
 import VideoPlayer from 'react-native-media-console';
 import Orientation from 'react-native-orientation-locker';
 import {styles} from './VideoPlayer.styles';
@@ -7,7 +7,6 @@ import {VIDEO, isIos} from '../../helpers/constants';
 import useBackbuttonHandler from '../../hooks/useBackButtonHandler';
 import {noop} from '../../helpers/functional';
 import {useAnimations} from '@react-native-media-console/reanimated';
-import PipHandler, {usePipModeListener} from 'react-native-pip-android';
 
 const videoRef = React.createRef<any>();
 
@@ -17,7 +16,6 @@ export const VideoDisplay = memo(() => {
     'portrait' | 'landscape'
   >(VIDEO.videoDisplayModes.portrait);
   // Use this boolean to show / hide ui when pip mode changes
-  const inPipMode = usePipModeListener();
 
   const isPortrait = useMemo(() => {
     return videoDisplayMode === VIDEO.videoDisplayModes.portrait;
@@ -109,40 +107,6 @@ export const VideoDisplay = memo(() => {
 
   useBackbuttonHandler(!isPortrait ? switchToPortrait : noop);
 
-  if (inPipMode) {
-    return (
-      <View style={styles.pipVideoContainer}>
-        <VideoPlayer
-          source={require('../../assets/BigBuckBunny.mp4')}
-          showOnStart={false}
-          onEnterFullscreen={onFullScreenIconToggle}
-          onExitFullscreen={onFullScreenIconToggle}
-          onBack={switchToPortrait}
-          videoRef={videoRef}
-          disableFocus={true}
-          pictureInPicture
-          ignoreSilentSwitch="ignore"
-          playInBackground
-          disableBack={true}
-          showDuration={false}
-          disableVolume
-          disableFullscreen
-          disableTimer
-          disableSeekbar
-          disableSeekButtons
-          useAnimations={useAnimations}
-          repeat
-          videoStyle={{backgroundColor: 'white'}}
-          disableDisconnectError={true}
-          onError={handleError}
-          controlAnimationTiming={VIDEO.controlAnimationTiming}
-          controlTimeoutDelay={VIDEO.controlTimeoutDelay}
-          rewindTime={VIDEO.rewindTime}
-          resizeMode={'cover'}
-        />
-      </View>
-    );
-  }
   return (
     <>
       <View
@@ -171,14 +135,6 @@ export const VideoDisplay = memo(() => {
           resizeMode={VIDEO.resizeMode}
         />
       </View>
-      <Button
-        title="Enter PIP mode"
-        onPress={() => {
-          if (!isIos()) {
-            PipHandler.enterPipMode(300, 214);
-          }
-        }}
-      />
     </>
   );
 });

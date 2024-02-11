@@ -892,8 +892,6 @@ PODS:
     - React-debug
   - react-native-orientation-locker (1.6.0):
     - React-Core
-  - react-native-pip-android (1.0.1):
-    - React-Core
   - react-native-video (6.0.0-beta.5):
     - React-Core
     - react-native-video/Video (= 6.0.0-beta.5)
@@ -1112,7 +1110,6 @@ DEPENDENCIES:
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
   - react-native-orientation-locker (from `../node_modules/react-native-orientation-locker`)
-  - react-native-pip-android (from `../node_modules/react-native-pip-android`)
   - react-native-video (from `../node_modules/react-native-video`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
@@ -1206,8 +1203,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   react-native-orientation-locker:
     :path: "../node_modules/react-native-orientation-locker"
-  react-native-pip-android:
-    :path: "../node_modules/react-native-pip-android"
   react-native-video:
     :path: "../node_modules/react-native-video"
   React-nativeconfig:
@@ -1291,7 +1286,6 @@ SPEC CHECKSUMS:
   React-logger: cb0dd15ac67b00e7b771ef15203edcb29d4a3f8e
   React-Mapbuffer: ac7eff7bcdb1716d18eb7b305ee8c43a9a1ed7c8
   react-native-orientation-locker: 4409c5b12b65f942e75449872b4f078b6f27af81
-  react-native-pip-android: 90f832151619dcc0cccd7a4dbad1488ffd3bce73
   react-native-video: 634ca004e7747638885f40797d5e5052042483e9
   React-nativeconfig: 4662ac75a0a77789c9ed896ed77baa1a25cdf006
   React-NativeModulesApple: 92bc296f2ae166d10cb4d6a05498c80bf4ef9fa2
