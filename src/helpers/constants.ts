@@ -1,13 +1,14 @@
 import {Dimensions, Platform} from 'react-native';
-import {TVideo, Undefined} from '../types';
+import {TVideo} from '../types';
 import DeviceInfo from 'react-native-device-info';
 
 export const getWindowWidth = () => Dimensions.get('window').width;
 export const getWindowHeight = () => Dimensions.get('window').height;
 
+const deviceType = DeviceInfo.getDeviceType();
+
 export const isIos = () => Platform.OS === 'ios';
 export const isTablet = () => deviceType === 'Tablet';
-const deviceType = DeviceInfo.getDeviceType();
 
 export const VIDEO: TVideo = {
   controlAnimationTiming: isIos() ? 500 : 0,

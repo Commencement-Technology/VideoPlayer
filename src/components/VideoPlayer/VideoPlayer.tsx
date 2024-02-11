@@ -159,7 +159,7 @@ export const VideoDisplay = memo(() => {
           onBack={switchToPortrait}
           videoRef={videoRef}
           disableFocus={true}
-          disableBack={false}
+          disableBack={isPortrait}
           useAnimations={useAnimations}
           repeat
           videoStyle={{backgroundColor: 'white'}}
@@ -173,7 +173,11 @@ export const VideoDisplay = memo(() => {
       </View>
       <Button
         title="Enter PIP mode"
-        onPress={() => PipHandler.enterPipMode(300, 214)}
+        onPress={() => {
+          if (!isIos()) {
+            PipHandler.enterPipMode(300, 214);
+          }
+        }}
       />
     </>
   );
