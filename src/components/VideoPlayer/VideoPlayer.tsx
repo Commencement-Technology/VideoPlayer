@@ -118,6 +118,7 @@ export const VideoDisplay = memo(() => {
         <VideoPlayer
           source={require('../../assets/BigBuckBunny.mp4')}
           showOnStart={false}
+          title="Big Buck Bunny 2024"
           onEnterFullscreen={onFullScreenIconToggle}
           onExitFullscreen={onFullScreenIconToggle}
           onBack={switchToPortrait}
@@ -126,6 +127,7 @@ export const VideoDisplay = memo(() => {
           disableBack={isPortrait}
           useAnimations={useAnimations}
           repeat
+          playInBackground={false}
           videoStyle={{backgroundColor: 'white'}}
           disableDisconnectError={true}
           onError={handleError}
